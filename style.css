@@ -1,0 +1,111 @@
+/* Reset basic styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  height: 100vh;
+}
+
+/* Green game background */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #d4f7d4;
+  justify-content: space-between;
+}
+
+/* Header with title and timer */
+#header {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#timer {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+@keyframes flash-yellow {
+  0%,
+  100% {
+    color: black;
+  }
+  50% {
+    color: yellow;
+  }
+}
+
+@keyframes flash-red {
+  0%,
+  100% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+}
+
+#timer.flash-yellow {
+  animation: flash-yellow 1s infinite;
+}
+
+#timer.flash-red {
+  animation: flash-red 1s infinite;
+}
+
+/* Game area (middle part) */
+#game-area {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer info & controls */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 1.2em;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+  background-color: #45a049;
+}
+
+/* Frog style */
+.frog {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.frog i {
+  font-size: inherit;
+  color: inherit;
+}
+
+.game-message {
+  font-size: 2rem;
+  text-align: center;
+  color: #b30000;
+  margin-top: 150px;
+  font-family: "Comic Sans MS", cursive;
+}
